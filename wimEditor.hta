@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<hta:application	id="wimEditor"
+							icon="./imgs/icon.ico"
+							border="thin"
+							borderstyle="normal"
+							caption="yes"
+							maximizebutton="no"
+							minimizebutton="no"
+							scroll="no"
+							showintaskbar="yes"/>
+		<title>WINDOWS IMAGE EDITOR</title>
+		<script language="vbscript" src="code.vbs"></script>
+		<script language="javascript" src="code.js"></script>
+	</head>
+	<body onload="appInit()">
+		<img id="btCapture" src="./imgs/capL.jpg" alt="Capture image (wim & esd) file from folder" width="128" height="128" style="cursor:hand" 
+		onmouseover="bttMove('btCaptureO')" 
+		onmouseleave="bttMove('btCaptureL')" 
+		onclick="captureNow()">
+		<img id="btAdd" src="./imgs/addL.jpg" alt="Add another image to image (wim & esd) file" width="128" height="128" style="cursor:hand" 
+		onmouseover="bttMove('btAddO')"  
+		onmouseleave="bttMove('btAddL')"  
+		onclick="addNow()">
+		<img id="btMount" src="./imgs/mouL.jpg" alt="Mount image (wim & esd) file to virtual drive" width="128" height="128" style="cursor:hand" 
+		onmouseover="bttMove('btMountO')" 
+		onmouseleave="bttMove('btMountL')" 
+		onclick="mountNow()"><br>
+		<img id="btApply" src="./imgs/appL.jpg" alt="Apply image (wim & esd) file to folder" width="128" height="128" style="cursor:hand" 
+		onmouseover="bttMove('btApplyO')" 
+		onmouseleave="bttMove('btApplyL')" 
+		onclick="applyNow()">
+		<img id="btDelete" src="./imgs/delL.jpg" alt="Delete an image from image (wim & esd) file that has multiple images" width="128" height="128" style="cursor:hand" 
+		onmouseover="bttMove('btDeleteO')"  
+		onmouseleave="bttMove('btDeleteL')"  
+		onclick="deleteNow()">
+		<img id="btUnmount" src="./imgs/unmL.jpg" alt="Unmount image from virtual drive" width="128" height="128" style="cursor:hand" 
+		onmouseover="bttMove('btUnmountO')" 
+		onmouseleave="bttMove('btUnmountL')" 
+		onclick="unmountNow()"><br>
+		<img id="btExport" src="./imgs/expL.jpg" alt="Export the specified image in image (wim; esd & swm) file to another file" width="128" height="128" style="cursor:hand" 
+		onmouseover="bttMove('btExportO')"  
+		onmouseleave="bttMove('btExportL')"  
+		onclick="exportNow()">
+		<img id="btSplit" src="./imgs/splL.jpg" alt="Split image (wim & esd) file into multiple read-only swm file" width="128" height="128" style="cursor:hand" 
+		onmouseover="bttMove('btSplitO')"  
+		onmouseleave="bttMove('btSplitL')"  
+		onclick="splitNow()">
+		<img id="btInfo" src="./imgs/infL.jpg" alt="Get all information of image (wim; esd & swm) file" width="128" height="128" style="cursor:hand" 
+		onmouseover="bttMove('btInfoO')"  
+		onmouseleave="bttMove('btInfoL')"  
+		onclick="infoNow()">
+	</body>
+</html>

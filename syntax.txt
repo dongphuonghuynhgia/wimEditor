@@ -1,0 +1,26 @@
+CAPTURE IMAGE (*.WIM & *.ESD)
+dism /capture-image /imagefile:<path to save wim or esd> /capturedir:<path of captured folder> /name:<name> [/description: <description>] /compress:{max|fast|none} [/bootable] /checkintegrity
+
+APPLY IMAGE (*.WIM; *.ESD & *.SWM)
+dism /apply-image /imagefile:<path to wim,esd or swm first> [/swmfile:<path to swm first>*.swm] /applydir:<tatget folder> {/index:<index>|/name:<name>} /checkintegrity
+
+MOUNT IMAGE (*.WIM; *.ESD & *VHD)
+dism /mount-image /imagefile:<path to file image> {/index:<index>|/name:<name>} /mountdir:<path to mounted folder> /readonly /checkintegrity
+
+UNMOUNT IMAGE
+dism /unmount-image /mountdir:<path to mounted folder> {Commit|/discard} /checkintegrity
+
+APPEND IMAGE (*.WIM & *.ESD)
+dism /append-image /imagefile:<path to wim or esd file> /capturedir:<path to captured folder> /name:<name> [/description: <description>] [/bootable] /checkintegrity
+
+DELETE IMAGE (*.WIM & *.ESD)
+Dism /Delete-Image /ImageFile:<path_to_image_file> {/Index:<image_index> | /Name:<image_name>} [/CheckIntegrity]
+
+EXPORT IMAGE (*.WIM; *.ESD & *.SWM)
+Dism /Export-Image /SourceImageFile:<path_to_image_file> {/SourceIndex:<image_index> | /SourceName:<image_name>} /DestinationImageFile:<path_to_image_file> [/DestinationName:<Name>] [/Compress:{fast|max|none|recovery}] [/Bootable] [/WIMBoot] [/CheckIntegrity]
+
+SPLIT IMAGE (*.WIM; *.ESD)
+Dism /Split-Image /ImageFile:<path_to_image_file> /SWMFile:<path_to_swm> /FileSize:<MB-Size> [/CheckIntegrity]
+
+GET INFORMATION (*.WIM; *.ESD; *.SWM; *.VHD; *.VHDX)
+Dism /Get-ImageInfo /ImageFile:<path_to_image.wim> [{/Index:<Image_index> | /Name:<Image_name>}]
